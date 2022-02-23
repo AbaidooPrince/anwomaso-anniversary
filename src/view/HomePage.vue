@@ -56,6 +56,11 @@ export default {
           src: require('../assets/invites/anniversary-banners-3.jpg'),
           text:
             'Experience real-world agile software development with your team'
+        },
+        {
+          src: require('../assets/invites/anniversary-banners-4.jpg'),
+          text:
+            'Experience real-world agile software development with your team'
         }
       ]
     }
