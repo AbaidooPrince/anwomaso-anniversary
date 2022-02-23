@@ -1,7 +1,7 @@
 <template>
-  <div class="h-100">
+  <div class="">
     <v-carousel cycle height="100%" :show-arrows="false">
-      <v-sheet height="95vh">
+      <v-sheet height="100%">
       <v-carousel-item v-for="(item, i) in items" :key="i">
         <v-img height="100%" class="shrink" :src="item.src">
           <!-- <v-row align="center" justify="center" class="pa-8" style="height: 80vh;">
@@ -22,204 +22,8 @@
       </v-carousel-item>
       </v-sheet>
     </v-carousel>
-    <v-sheet height="70vh">
-      <v-container grid-list-xs>
-        <v-row>
-          <v-col cols="12" md="12">
-            <h2 class="text-h3">What you will learn</h2>
-          </v-col>
-          <v-col cols="12" md="4">
-            <v-card flat outlined tile class="mx-auto">
-              <v-img
-                class="white--text align-end"
-                height="150px"
-                src="../assets/cool.png"
-              >
-                <v-card-title>All Applicants</v-card-title>
-              </v-img>
-
-              <v-card-subtitle class="pb-0">
-                <!-- Number 10 -->
-              </v-card-subtitle>
-
-              <v-card-text class="text--primary">
-                <div>Whitehaven Beach</div>
-
-                <div>Whitsunday Island, Whitsunday Islands</div>
-              </v-card-text>
-
-              <v-card-actions>
-                <v-btn color="orange" text>
-                  Share
-                </v-btn>
-
-                <v-btn color="orange" text>
-                  Explore
-                </v-btn>
-              </v-card-actions>
-            </v-card>
-          </v-col>
-          <v-col cols="12" md="4">
-            <v-card flat outlined tile class="mx-auto">
-              <v-img
-                class="white--text align-end"
-                height="150px"
-                src="../assets/cool2.png"
-              >
-                <v-card-title>Frontend Option</v-card-title>
-              </v-img>
-
-              <v-card-subtitle class="pb-0">
-                <!-- Number 10 -->
-              </v-card-subtitle>
-
-              <v-card-text class="text--primary">
-                <div>Whitehaven Beach</div>
-
-                <div>Whitsunday Island, Whitsunday Islands</div>
-              </v-card-text>
-
-              <v-card-actions>
-                <v-btn color="orange" text>
-                  Share
-                </v-btn>
-
-                <v-btn color="orange" text>
-                  Explore
-                </v-btn>
-              </v-card-actions>
-            </v-card>
-          </v-col>
-          <v-col cols="12" md="4">
-            <v-card flat outlined tile class="mx-auto">
-              <v-img
-                class="white--text align-end"
-                height="150px"
-                src="../assets/cool3.png"
-              >
-                <v-card-title>Backend Option</v-card-title>
-              </v-img>
-
-              <v-card-subtitle class="pb-0">
-                <!-- Number 10 -->
-              </v-card-subtitle>
-
-              <v-card-text class="text--primary">
-                <div>Whitehaven Beach</div>
-
-                <div>Whitsunday Island, Whitsunday Islands</div>
-              </v-card-text>
-
-              <v-card-actions class="">
-                <div class="">
-                <v-btn right color="orange" text>
-                  Apply
-                </v-btn>
-                </div>
-              </v-card-actions>
-            </v-card>
-          </v-col>
-        </v-row>
-      </v-container>
-    </v-sheet>
-    <!-- <v-sheet height="70vh"> </v-sheet> -->
-    <v-sheet color="grey lighten-4 py-8">
-      <v-container id="register">
-        <v-row
-          align="center"
-          class="pa-lg-12"
-          style="width: 75%; margin-left: auto; margin-right:auto;"
-        >
-          <v-col cols="12">
-            <v-card-title class="">Registration Form</v-card-title>
-          </v-col>
-          <v-col cols="12" lg="6" class="py-0">
-            <label class="subtitle font-weight-bold">First Name</label>
-            <v-text-field class="rounded-0" dense outlined> </v-text-field>
-          </v-col>
-          <v-col cols="12" lg="6" class="py-0">
-            <label class="subtitle font-weight-bold">Last Name</label>
-            <v-text-field class="rounded-0" dense outlined>
-            </v-text-field> </v-col
-          ><v-col cols="12" lg="8" class="py-0">
-            <label class="subtitle font-weight-bold">Chose an option:</label>
-            <div>
-              <small
-                >Chose <b>frontend</b> if you are interested in VueJs and
-                <b>backend</b> if your interest is in NodeJs</small
-              >
-            </div>
-            <v-radio-group class="mt-0" row>
-              <v-radio label="Frontend"> </v-radio>
-              <v-radio label="Backend"> </v-radio>
-            </v-radio-group>
-          </v-col>
-          <v-col cols="12" lg="8" class="py-0">
-            <label class="subtitle font-weight-bold"
-              >Select preferred class hours</label
-            >
-            <div>
-              <small
-                >We would like to know when you would be prefer class sessions
-                are held.</small
-              >
-            </div>
-            <v-select class="rounded-0" dense :items="preferredHours" outlined>
-            </v-select>
-          </v-col>
-          <v-col cols="12" lg="8" class="py-0">
-            <label class="subtitle font-weight-bold"
-              >Select your Javascript level</label
-            >
-            <div>
-              <small
-                >Freely tell us your level of expertise when it comes to
-                javascript. You can express further in the
-                <i>Other Information</i> field.</small
-              >
-            </div>
-            <v-select class="rounded-0" dense :items="level" outlined>
-            </v-select>
-          </v-col>
-          <v-col cols="12" lg="8" class="py-0">
-            <label class="subtitle font-weight-bold"
-              >Zoom or Google Meet?</label
-            >
-            <div>
-              <small
-                >Do you prefer to use Zoom or Google Meet for class
-                sessions</small
-              >
-            </div>
-            <v-select class="rounded-0" dense :items="video" outlined>
-            </v-select>
-          </v-col>
-          <v-col cols="12" lg="12" class="py-0">
-            <label class="subtitle font-weight-bold">Other information:</label>
-            <div>
-              <small
-                >If there are other information you would like your trainers to
-                know, send them here.</small
-              >
-            </div>
-            <v-textarea auto-grow class="rounded-0" rows="4" dense outlined>
-            </v-textarea>
-          </v-col>
-          <v-col cols="12" lg="12" class="py-0">
-            <label class="subtitle font-weight-bold"
-              >Your expectation for this training:</label
-            >
-            <v-textarea auto-grow class="rounded-0" rows="4" dense outlined>
-            </v-textarea>
-          </v-col>
-          <v-col class="text-center" cols="12" md="12">
-            <v-btn outlined width="250" rounded>
-              Register
-            </v-btn>
-          </v-col>
-        </v-row>
-      </v-container>
-    </v-sheet>
+    <!-- <v-container fluid>
+    </v-container> -->
   </div>
 </template>
 
@@ -241,15 +45,15 @@ export default {
       preferredHours: ['Morning', 'Afternoon', 'Evening'],
       items: [
         {
-          src: require('../assets/upskill.jpg'),
+          src: require('../assets/invites/anniversary-banners.jpg'),
           text: 'Skill-up with our Javascript Developer sessions. '
         },
         {
-          src: require('../assets/handson.jpg'),
+          src: require('../assets/invites/anniversary-banners-2.jpg'),
           text: 'Practical sessions to speed your expertise on how things work'
         },
         {
-          src: require('../assets/project.jpg'),
+          src: require('../assets/invites/anniversary-banners-3.jpg'),
           text:
             'Experience real-world agile software development with your team'
         }
